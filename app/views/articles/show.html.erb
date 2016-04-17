@@ -1,0 +1,29 @@
+<%= provide(:title, 'Article') %>
+<div class="page-header">
+  <h1><%= @article.title %></h1>
+</div>
+
+<div class="container">
+  <div class="col-md-8">
+    <div class="row">
+      <div class="bing5tui3-blog-post">
+        <%= markdown @article.content %>
+      </div>
+      <hr>
+    </div>
+    <div class="row" style="text-align:right;">
+      <%= link_to "Edit", edit_user_article_path(@user, @article), :class => "btn btn-primary" %>
+      <%= link_to "Delete", user_article_path(@user, @article), :method => "DELETE" %>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail text-center">
+      <div class="bing5tui3-portrait-container">
+        <%= image_tag @user.portrait.url(:medium) %>
+      </div>
+      <hr>
+      <p><%= @user.name %></p>
+      <p><%= @user.email %></p>
+    </div>
+  </div>
+</div>

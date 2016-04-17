@@ -1,0 +1,24 @@
+<%= provide(:title, 'Dashboard') %>
+<div class="page-header">
+  <h1>DASHBOARD</h1>
+</div>
+
+<div class="container">
+
+<div class="col-md-3 col-sm-4 col-xs-12">
+  <div class="thumbnail text-center">
+    <%= link_to "New Article", new_user_article_path(current_user),
+        :class => "btn btn-default btn-block" %>
+    <%= link_to "My Articles", user_articles_path(current_user),
+    :class => "btn btn-default btn-block" %>
+
+    <%= link_to "All Categories", categories_path, :class => "btn btn-default btn-block" %>
+    <%= link_to "New Category", new_category_path, :class => "btn btn-default btn-block" %>
+  </div>
+</div>
+
+<div class="col-md-7 col-sm-5 col-xs-12">
+</div>
+
+
+</div>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %></title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render 'shared/navbar' %>
+    <div class="container-fluid">
+      <% if @jumbotron %>
+        <div class="jumbotron text-center">
+          <h1>T<small>RUE</small>P<small>OINT</small> F<small>ORGE</small></h1>
+          <p>
+            <i>@bing5tui3</i> says hello to you
+          </p>
+          <%= link_to "Back into your forge", login_path, {:class=>'btn btn-lg btn-primary'} %>
+        </div>
+      <% end %>
+    </div>  
+    <div class="container bing5tui3-main-container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %> bing5tui3-alert"><%= value %></div>
+      <% end %>
+
+  	  <%= yield %>
+      <!-- <div><%= debug(params) if Rails.env.development? %></div> -->
+    </div>
+    <%= render 'shared/footbar' %>
+  </body>
+</html>

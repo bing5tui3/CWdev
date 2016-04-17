@@ -1,0 +1,29 @@
+<div class="page-header">
+  <h1>CROP YOUR IMAGE</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <%= image_tag @user.portrait.url(:large) , :id => "cropbox" %>
+  </div>
+  <div class="row">
+    <hr />
+  </div>
+
+  <div class="row">
+    <%= form_for @user do |f| %>
+      <div class="row bing5tui3-hidden">
+        <% %w[x y w h].each do |attribute| %>
+          <%= f.hidden_field "crop_#{attribute}" %><br />
+        <% end %>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <div class="actions">
+            <%= f.submit "Confirm", :class => 'btn btn-lg btn-primary btn-block' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

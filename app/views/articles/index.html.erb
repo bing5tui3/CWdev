@@ -1,0 +1,23 @@
+<%= provide(:title, 'Articles') %>
+<%= provide(:nav_articles, 'active') %>
+<div class="page-header">
+  <h1>BLOG ARTICLES <small><%= @user.name %></small></h1>
+</div>
+<div class="container">
+  <div class="col-md-8 col-sm-8 col-xs-12 bing5tui3-blog-main">
+    <% if @articles.count == 0 %>
+      <p>You have not write any article, click 'new' to publish one</p>
+    <% else %>
+      <% @articles.each do |article| %>
+        <div class="bing5tui3-blog-post">
+          <%= link_to article.title, user_article_path(@user, article) %>
+          <p class="bing5tui3-blog-time">Posted on <%= article.created_at.strftime("%B %d %Y %H:%M") %></p>
+          <%= markdown(truncate(article.content, :length => 1000)) %>
+          <%= link_to 'View', user_article_path(@user, article), { :class => "btn btn-primary" } %>
+        </div>
+        <hr>
+      <% end %>
+      <%= will_paginate @articles, :page_links => false %>
+    <% end %>
+  </div>
+</div>

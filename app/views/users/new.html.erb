@@ -1,0 +1,105 @@
+<%= provide(:title, 'Sign up') %>
+<div class="page-header">
+  <h1>SIGN UP YOUR ACCOUNT</h1>
+</div>
+
+<div class="container bing5tui3-form-container">
+
+  <%= form_for :user, url: users_path, html: {:class=>"form-register"} do |f| %>  
+
+    <%= render 'shared/error_message' %>
+
+    <!-- 用户ID -->
+    <div class="row">
+      <div class="col-md-3 col-md-offset-2 bing5tui3-form-label">
+        <%= f.label :name, 'Name:' %>
+      </div>
+      <div class="col-md-3">
+        <%= f.text_field :name, {:class=>"form-control", :placeholder=>"Preferred user name", :'required autofocus'=>"true"} %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-2">
+        <hr />
+      </div>
+    </div>
+
+    <!-- 邮箱地址 -->
+    <div class="row">
+      <div class="col-md-3 col-md-offset-2 bing5tui3-form-label">
+        <%= f.label :email, 'Email:' %>
+      </div>
+      <div class="col-md-3">
+        <%= f.text_field :email, {:class=>"form-control", :placeholder=>"Email address", :required=>"true"} %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-md-offset-2">
+        <hr />
+      </div>
+    </div>
+
+    <!-- 密码 -->
+    <div class="row">
+      <div class="col-md-3 col-md-offset-2 bing5tui3-form-label">
+        <%= f.label :password, 'Password:' %>
+      </div>
+      <div class="col-md-3">
+        <%= f.text_field :password, {:class=>"form-control", :placeholder=>"Password", :required=>"true", :type=>"password" } %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-md-offset-2">
+        <hr />
+      </div>
+    </div>
+
+    <!-- 重输入密码 -->
+    <div class="row">
+      <div class="col-md-3 col-md-offset-2 bing5tui3-form-label">
+        <%= f.label :password_confirmation, 'Retype password:' %>
+      </div>
+      <div class="col-md-3">
+        <%= f.text_field :password_confirmation, {:class=>"form-control", :placeholder=>"Retype password", :required=>"true", :type=>"password" } %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-md-offset-2">
+        <hr />
+      </div>
+    </div>
+
+    <!-- 邀请码 -->
+    <div class="row">
+      <div class="col-md-3 col-md-offset-2 bing5tui3-form-label">
+        <%= f.label :icode, 'ICode:' %>
+      </div>
+      <div class="col-md-3">
+        <%= f.text_field :icode, {:class=>"form-control", :placeholder=>"Invitation code", :required=>"true"} %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-md-offset-2">
+        <hr />
+      </div>
+    </div>
+
+    <!-- 提交 -->
+    <div class="row">
+      <div class="col-md-5">
+      </div>
+      <div class="col-md-2">  
+        <%= f.submit 'Register', :class => 'btn btn-lg btn-primary btn-block' %>
+      </div>
+      <div class="col-md-5">
+      </div>
+    </div>  
+  <% end %>
+
+  </div>
+
+ </div> <!-- /container -->

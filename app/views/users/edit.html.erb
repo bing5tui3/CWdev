@@ -1,0 +1,65 @@
+<% provide(:title, 'Edit ' + @user.name) %>
+<div class="page-header">
+  <h1>EDIT YOUR PROFILE</h1>
+</div>
+<div class="container">
+  <div class="row">
+
+      <%= form_for @user, :html => { :multipart => true } do |f| %>
+        <!-- Name -->
+        <div class="row">
+          <div class="col-md-4 col-md-offset-1 bing5tui3-attr-label">
+            <%= f.label :name, 'Your user name:' %>
+          </div>
+          <div class="col-md-4">
+            <%= f.text_field :name, { :class=>"form-control", :placeholder=>@user.name, :autofocus=>"true" } %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-1">
+            <hr />
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="row">
+          <div class="col-md-4 col-md-offset-1 bing5tui3-attr-label">
+            <%= f.label :email, 'Your email:' %>
+          </div>
+          <div class="col-md-4">
+            <%= f.text_field :email, { :class=>"form-control", :placeholder=>@user.email } %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-1">
+            <hr />
+          </div>
+        </div>
+
+        <!-- Upload user portrait -->
+        <div class="row">
+          <div class="col-md-4 col-md-offset-1 bing5tui3-attr-label">
+            <%= f.label :portrait, 'Upload your image:' %>
+          </div>
+          <div class="col-md-2">
+            <%= f.file_field :portrait %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-1">
+            <hr />
+          </div>
+        </div>
+
+        <!-- Submit button -->
+        <div class="row">
+          <div class="col-md-2 col-md-offset-5">
+            <%= f.submit "Save", :class=>'btn btn-lg btn-block btn-primary' %>
+          </div>
+        </div>
+
+      <% end %>
+     
+  </div>
+</div>
+  

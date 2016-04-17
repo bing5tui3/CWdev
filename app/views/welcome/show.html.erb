@@ -1,0 +1,11 @@
+<% provide(:title, "TruePointForte") %>
+<div class="container">
+  <div class="row">
+      <% @articles.each do |article| %>
+        <div class="col-md-4">
+          <h2><%= article.title %></h2>
+          <%= markdown(truncate(article.content, :length => 400)) %>
+        </div>
+      <% end %>
+  </div>
+</div>

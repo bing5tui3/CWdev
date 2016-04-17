@@ -1,0 +1,22 @@
+<% if !@user.nil? %>
+  <% if @user.errors.any? %>
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-5">
+        <div>  
+          <div class="alert alert-warning">
+            <p>The form contains <%= pluralize(@user.errors.count, "error") %></p>
+          </div>   
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+              <li class="bing5tui3-li-alert"> <%= msg %> </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+  <% end %>
+<% end %>

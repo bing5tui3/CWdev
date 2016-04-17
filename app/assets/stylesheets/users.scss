@@ -1,0 +1,39 @@
+.bing5tui3-portrait-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/*.bing5tui3-portrait-container img:hover {
+  transform: scale(1.1);
+}
+
+.bing5tui3-portrait-container img {
+  z-index: 0;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}*/
+
+.bing5tui3-form-container p {
+  font-size: 16px;
+}
+
+.bing5tui3-attr-label label {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.bing5tui3-form-label label {
+  font-size: 20px;
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+.bing5tui3-hidden {
+  display: none;
+}

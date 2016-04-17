@@ -1,0 +1,57 @@
+.bing5tui3-blog-main {
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
+.bing5tui3-blog-title {
+  font-size: 40px;
+}
+
+.bing5tui3-blog-post {
+  margin: 0 0 50px 0;
+  padding: 0;
+  color: #74757b;
+  display: block;
+  font-size: 20px;
+  line-height: 35px;
+  font-family: 'ubuntu';
+  min-height: 400px;
+}
+
+.bing5tui3-blog-post > a {
+  color: #526dab;
+  font-size: 40px;
+}
+
+.bing5tui3-blog-post > .btn-primary {
+  color: #526dab;
+  font-size: 15px;
+  background-color: #ffffff;
+  border-color: #526dab;
+  margin-top: 10px;
+}
+
+.bing5tui3-blog-post > .btn-primary:hover,
+.bing5tui3-blog-post > .btn-primary:focus,
+.bing5tui3-blog-post > .btn-primary:active {
+  background-color: #526dab !important;
+  color: #ffffff !important;
+  border-color: #526dab !important;
+}
+
+.bing5tui3-blog-time {
+  color: #71a8b1;
+  font-size: 15px;
+}
+
+.bing5tui3-blog-editarea {
+  height: 500px;
+}
+
+.bing5tui3-article-submit {
+  margin-top: 10px;
+}
+
+textarea.form-control {
+  height: 100%;
+}

@@ -1,0 +1,14 @@
+.pagination > li > a {
+  color: #2c3e50;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #cecbd1;
+}

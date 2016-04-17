@@ -1,0 +1,86 @@
+/*
+  COLOR SCHEME: 
+
+  http://colorschemedesigner.com/csd-3.5/
+
+          navy blue: #2c3e50;
+  1-light navy blue: #6f8ca8;
+  2-light navy blue: #7e93a8;
+  1-dark  navy blue: #28323c;
+  2-dark  navy blue: #0e2134;
+  
+*/
+.navbar-default {
+  background-color: #2c3e50;
+  border-color: #28323c;
+  color: #ffffff;
+}
+
+.navbar-collapse {
+  margin-top: -1px;
+  border: 0;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: #28323c;
+  color: #7e93a8;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #7e93a8;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: #28323c;
+  color: #7e93a8;
+}
+
+.navbar-default .navbar-nav > .open > .dropdown-menu,
+.navbar-default .navbar-nav > .open > .dropdown-menu > li,
+.navbar-default .navbar-nav > .open > .dropdown-menu > li > a {
+  background-color: #2c3e50;
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > .open > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > .open > .dropdown-menu > li > a:focus{
+  background-color: transparent;
+  color: #7e93a8;
+}
+
+.navbar-default .navbar-nav > .open > .dropdown-menu > .divider {
+  background-color: #28323c;
+  margin: 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+.navbar-brand {
+  padding-top: 12px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus {
+  background-color: #28323c;
+}
+
+.navbar-text p {
+  color: #ffffff;
+}
+
+.bing5tui3-navbar-logo {
+  width: 30px;
+  padding-top: -5px;
+  float: left;
+}

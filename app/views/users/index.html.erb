@@ -1,0 +1,24 @@
+<% provide(:title, 'Members') %>
+<% provide(:nav_members, 'active') %>
+
+<div class="bing5tui3-container">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <ul class="bing5tui3-list">
+          <% @users.each do |user| %>
+            <li>
+              <%= image_tag user.portrait.url(:thumb), :class=> "bing5tui3-user-portrait" %>
+              <%= link_to user.name, user_path(user) %>
+            </li>
+            <% if user != @users.last %>
+              <hr />
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>

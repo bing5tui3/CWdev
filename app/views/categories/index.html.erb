@@ -1,0 +1,35 @@
+<%= provide(:title, 'All Categories') %>
+<div class="page-header">
+  <h1>ALL CATEGORIES</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 col-sm-8 col-xs-12">
+      <% if @categories.count == 0 %>
+        <div class="row">
+          <p>You have not defined any category, click 'create' to add some</p>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <%= link_to "Create", new_category_path, :class => "btn btn-primary btn-block" %>
+          </div>
+        </div>  
+      <% else %>
+        <div class="list-group">
+          <% @categories.each do |category| %>
+            <div class="row">
+              <div class="col-md-10 col-sm-10 col-xs-10">
+                <%= link_to category.name, edit_category_path(category), :class => "list-group-item" %>
+              </div>
+              <div class="col-md-2 col-sm-2 col-xs-2">
+                <%= link_to 'DEL', category_path(category), { :class => "btn btn-primary", :style => "margin-top:5px", :method => "DELETE" } %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <%= will_paginate @categories, :page_links => false %>
+      <% end %>
+    </div>
+  </div>
+</div>
